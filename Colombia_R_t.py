@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # %% [markdown]
 """
 # Análisis de 🇨🇴 Colombia a nivel departamental | $R_t$
@@ -52,8 +53,8 @@ from scipy import stats as sps
 from scipy.interpolate import interp1d
 from IPython.display import display
 
-get_ipython().run_line_magic("config", "InlineBackend.figure_format = 'retina'")
-get_ipython().run_line_magic("matplotlib", "inline")
+# get_ipython().run_line_magic("config", "InlineBackend.figure_format = 'retina'")
+# get_ipython().run_line_magic("matplotlib", "inline")
 
 
 # %%
@@ -304,6 +305,9 @@ ax = posteriors.plot(
 
 ax.set_xlabel("$R_t$")
 
+
+# %%
+len(np.cumsum(posteriors.values))
 
 # %%
 # Note that this takes a while to execute - it's not the most efficient algorithm
